@@ -1,0 +1,4 @@
+.ipynb_checkpoints/*
+.vscode/* 
+course_1_algorithmic_toolbox/course_materials
+*.out
