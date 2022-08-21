@@ -15,7 +15,7 @@ long long fibonacci_fast(int n)
     // write your code here
     std::vector<long long> fib_numbers;
     for (int i = 0; i <= n; ++i)
-        if(i == 0 || i == 1){
+        if(i <= 1){
             fib_numbers.push_back(i);
         }
         else{
