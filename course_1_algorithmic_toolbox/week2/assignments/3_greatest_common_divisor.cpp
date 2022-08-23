@@ -1,7 +1,7 @@
 #include<iostream>
 #include<bits/stdc++.h>
 
-//with a mechanical solution, b becomes a, and the remainder becomes b
+//with a mechanical solution, a becomes b, and b becomes the remainder
 //then, gcd(a, b) = gcd(b, a%b) 
 //once the remainder is 0, a is the GCD 
 
@@ -21,12 +21,13 @@ int main(int argc, char const *argv[])
     int a = 0;
     int b = 0;
 
-    cout << "Enter a : " ;
+    //cout << "Enter a : " ;
     cin >> a; 
-    cout << "Enter b : " ;
+    //cout << "Enter b : " ;
     cin >> b; 
 
-    cout << "GCD is " << gcd(a, b) << endl; 
+    //cout << "GCD is " << gcd(a, b) << endl; 
+	cout << gcd(a, b); 
 
     return 0;
 }
