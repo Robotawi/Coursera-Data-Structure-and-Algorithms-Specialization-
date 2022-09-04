@@ -4,6 +4,9 @@
 
 using namespace std;
 
+// this solution uses a vector of Segments.\
+Using a vector of struct is better than using a map in readability
+
 struct Segment{
     int left; 
     int right;
@@ -15,7 +18,7 @@ vector<int> calc_min_points(vector<Segment>& segments){
     points.push_back(point);
 
     for (auto& seg : segments){
-        // if point is not on the segment, then next point is this segment's right end
+        // if the point is not on the segment, then next point is this segment's right end
         if (point < seg.left || point > seg.right)
         {
             point = seg.right;
