@@ -32,7 +32,12 @@ int merge(vector<int> &sequence, int l, int m, int r)
         }
         else
         {
-            count = count + (m + 1 - i);//the tricky point. This is because all elements up to m+1 will
+            //This is tricky. It's like that because if an element A on the left subarray is > an element on the right,\
+            all the elements after A will form inversion pairs with the smaller element from the right subarray.\
+            m+1 is the number of elements on the left subarray because the counting starts from 0 and last element in it has index = m (according to my implementation)
+            
+            count = count + (m + 1 - i);//the tricky point.
+
             temp.at(k) = sequence.at(j);
             j++;
             k++;
