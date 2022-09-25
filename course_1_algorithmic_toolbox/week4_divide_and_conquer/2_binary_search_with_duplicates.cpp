@@ -17,8 +17,8 @@ int binary_search(vector<int> &sequence, int target)
 
         if (target == sequence.at(mid))
         {
-            // if we reached the target element, check the elements before it\
-            as long as they are equal to the target, more the previous index towards the beginning of the array
+            // if we reached the target, check the element before it\
+            as long as the 'pre'vious element equals the target, move the previous index towards the beginning of the array
             pre = mid;
 
             if (pre == 0)
