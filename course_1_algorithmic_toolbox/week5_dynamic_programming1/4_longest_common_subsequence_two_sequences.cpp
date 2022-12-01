@@ -3,8 +3,9 @@
 
 using namespace std;
 
-int least_com_subsequence(vector<int> &s1, vector<int> &s2)
+int longest_com_subsequence(vector<int> &s1, vector<int> &s2)
 {
+    // Make the DP table
     vector<vector<int>> T(s1.size() + 1, vector<int>(s2.size() + 1));
 
     for (size_t i = 0; i <= s1.size(); i++)
@@ -14,7 +15,7 @@ int least_com_subsequence(vector<int> &s1, vector<int> &s2)
             if (i == 0 || j == 0)
                 T[i][j] = 0;
 
-            else if (s1[i] == s2[j])
+            else if (s1.at(i - 1) == s2.at(j - 1)) // This is out-of-range
                 T[i][j] = T[i - 1][j - 1] + 1;
 
             else
@@ -46,7 +47,7 @@ int main(int argc, char const *argv[])
         cin >> s2.at(i);
     }
 
-    cout << least_com_subsequence(s1, s2) << endl;
+    cout << longest_com_subsequence(s1, s2) << endl;
 
     return 0;
 }
